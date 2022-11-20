@@ -116,9 +116,16 @@ function routerLink() {
    **/
   if (
     href.substr(0, 7) == 'http://' ||
-    href.substr(0, 8) == 'https://' ||
-    href.substr(0, 1) == '#'
+    href.substr(0, 8) == 'https://'
   ) return true;
+
+  /**
+   * Rola a tela para o topo.
+   **/
+  if (href.substr(0, 4) == '#top') {
+    window.scrollTo(0, 0);
+    return false;
+  }
 
   /**
    * Carrega a rota solicitada.
