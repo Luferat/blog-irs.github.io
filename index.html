@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<!--
+  Inicio do documento HTML5
+  Para saber mais:
+    • https://www.w3schools.com/html
+-->
+<html lang="pt-br">
+<!-- Cabeçalho com metadados do documento -->
+
+<head>
+  <!-- Define a tabela de caracteres universal -->
+  <meta charset="UTF-8" />
+
+  <!-- Torna a página responsivo -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Carrega folhas de estilo do aplicativo -->
+  <!-- <link rel="stylesheet" href="/style.velho.css" /> -->
+  <!-- Descomente a linha acima e comente a linha abaixo para usar a versão anterior do CSS. -->
+  <link rel="stylesheet" href="/style.css" />
+
+  <!--
+      Define o ícone de favoritos.
+      Para saber mais:
+        • https://pt.wikipedia.org/wiki/Favicon
+        • https://www.w3schools.com/html/html_favicon.asp
+    -->
+  <link rel="shortcut icon" href="/img/logo01.png" />
+
+  <!--
+    Carrega as folhas de estilo específicas de cada rota/página.
+    O valor de 'href' é definido pelo JavaScript, na função 'loadPage()'
+    que está em '/index.js'.
+  -->
+  <link rel="stylesheet" href="" id="pageCSS">
+
+  <!-- Título do documento -->
+  <title>Blog IRS</title>
+</head>
+
+<!-- 
+    Corpo do documento (viewport).
+    Para saber mais:
+      • https://www.w3schools.com/css/css_rwd_viewport.asp
+  -->
+
+<body>
+  <!-- Âncora "topo da página" -->
+  <a id="top"></a>
+
+  <!-- 
+      Container da página:
+      Este elemento permite limitar o tamanho mínimo e máximo da página
+      e também centraliza ela na tela, em telas maiores.
+     -->
+  <div id="wrap">
+    <!-- Cabeçalho da página -->
+    <header>
+      <!-- Logotipo clicável usando Font Awesome -->
+      <!-- <a href="/"><i class="fa-solid fa-book fa-fw"></i></a> -->
+
+      <!-- Logotipo clicável usando imagem -->
+      <a href="home">
+        <img src="/img/logo01.png" alt="Logotipo do Blog IRS" />
+      </a>
+
+      <!-- Título e slogan do site / página -->
+      <h1>
+        <span>Blog IRS</span>
+        <span>Instituto</span>
+        <span>Rogério</span>
+        <span>Steinberg</span>
+      </h1>
+    </header>
+
+    <!--
+          Menu principal:
+            / → Raiz do aplicativo → Será carregada a página inicial;
+            /contacts → Página com formulário e links de contato;
+            /about → Sobre o site, autor e privacidade;
+            /profile → Gestão do usuário (login, logou, perfil, ...).
+       -->
+    <nav>
+
+      <!-- Link do item de menu para a página especificada → / -->
+      <a href="home">
+        <!--
+            Ícone do ítem usando Font Awesome.
+            Lembre-se de acrescentar "fa-fw" na classe dos ícones. 
+          -->
+        <i class="fa-solid fa-house fa-fw"></i>
+        <!-- Etiqueta (label) do item -->
+        <span>Início</span>
+      </a>
+
+      <!-- 
+          Outros itens do menu. 
+          Tem a mesma estrutura do anterior. 
+        -->
+      <a href="contacts">
+        <i class="fa-solid fa-comments fa-fw"></i>
+        <span>Contatos</span>
+      </a>
+
+      <a href="about">
+        <i class="fa-solid fa-circle-info fa-fw"></i>
+        <span>Sobre</span>
+      </a>
+
+    </nav>
+
+    <!-- 
+        Bloco do conteúdo.
+        Este bloco terá um conteúdo diferente para cada página/rota acessada,
+        que será carregado pelo JavaScript.
+      -->
+    <main></main>
+
+    <!-- Rodapé da página -->
+    <footer>
+      <!-- Link para a raiz do aplicativo (página inicial) -->
+      <a href="home"><i class="fa-solid fa-house fa-fw"></i></a>
+      <!-- Licença do aplicativo e políticas de privacidade -->
+      <div>
+        <span>&copy; 2022 IRS</span>
+        <small><a href="policies">Políticas de privacidade</a></small>
+      </div>
+      <!-- Link para o topo desta página -->
+      <a href="#top"><i class="fa-solid fa-circle-up fa-fw"></i></a>
+    </footer>
+    <span class="after-footer">&nbsp;</span>
+  </div>
+
+  <!--
+      Importa a biblioteca JavaScript "jQuery" via CDN.
+      Para saber mais:
+        • https://jquery.com/
+        • https://www.w3schools.com/jquery/
+        • https://github.com/jquery/jquery
+    -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+  <!-- Inclui o JavaScript do aplicativo, que depende de "jQuery" -->
+  <script src="/index.js"></script>
+</body>
+
+</html>
